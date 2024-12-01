@@ -33,6 +33,10 @@ body {
     cursor: pointer;
 }
 
+.header .cart button:hover {
+    background-color: brown;
+}
+
 
 .container {
     display: flex;
