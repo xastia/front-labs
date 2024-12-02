@@ -1,4 +1,3 @@
-/* Базові стилі */
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +49,7 @@ body {
 }
 
 .item img {
-    width: 100%;
+    max-width: 300px;
     border-radius: 8px;
     margin-bottom: 15px;
 }
@@ -87,7 +86,7 @@ body {
     color: #d98659;
 }
 
-/* Адаптивність */
+
 @media (max-width: 1024px) {
     .main-content {
         flex-direction: column;
