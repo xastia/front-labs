@@ -15,22 +15,47 @@
     </header>
     <main class="main-content">
         <section class="products">
-            <article class="product">
-                <img src="imgs/wallet.jpg" alt="Шкіряний гаманець">
-                <h2>Шкіряний гаманець</h2>
-                <p>Стильний і компактний гаманець, який вмістить всі ваші необхідні речі.</p>
-            </article>
-            <article class="product">
-                <img src="imgs/belt.jpg" alt="Ремінь ручної роботи">
-                <h2>Ремінь ручної роботи</h2>
-                <p>Міцний ремінь із натуральної шкіри, що стане ідеальним доповненням до вашого образу.</p>
-            </article>
+            <table class="products-table">
+                <thead>
+                    <tr>
+                        <th>Зображення</th>
+                        <th>Назва продукту</th>
+                        <th>Опис</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="product">
+                        <td>
+                            <img src="imgs/wallet.jpg" alt="Шкіряний гаманець" style="width: 150px; border-radius: 8px;">
+                        </td>
+                        <td>
+                            <h2>Шкіряний гаманець</h2>
+                        </td>
+                        <td>
+                            Стильний і компактний гаманець, який вмістить всі ваші необхідні речі.
+                        </td>
+                    </tr>
+                    <tr class="product">
+                        <td>
+                            <img src="imgs/belt.jpg" alt="Ремінь ручної роботи" style="width: 150px; border-radius: 8px;">
+                        </td>
+                        <td>
+                            <h2>Ремінь ручної роботи</h2>
+                        </td>
+                        <td>
+                            Міцний ремінь із натуральної шкіри, що стане ідеальним доповненням до вашого образу.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
+
         <section class="subscribe">
             <input type="email" placeholder="Введіть ваш email" class="email-input">
             <button class="subscribe-btn">Підписатися</button>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer-list">
             <ul>
@@ -47,3 +72,4 @@
     </footer>
 </body>
 </html>
+
