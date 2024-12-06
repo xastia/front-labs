@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  background: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
+}
+.main-content .left-content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-content .left-content .item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.main-content .left-content .item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.main-content .left-content .item img {
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.main-content .left-content .item h2 {
+  margin-bottom: 10px;
+  color: #d98659;
+}
+.main-content .right-sidebar {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.main-content .right-sidebar h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+.main-content .right-sidebar ul {
+  list-style-type: none;
+}
+.main-content .right-sidebar ul li {
+  margin-bottom: 10px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+.main-content .right-sidebar ul li:hover {
+  color: #d98659;
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .main-content .right-sidebar {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    font-size: 20px;
+  }
+  .main-content .left-content .item h2 {
+    font-size: 18px;
+  }
+  .main-content .right-sidebar {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .main-content .left-content .item p {
+    font-size: 14px;
+  }
+  .main-content .left-content .item h2 {
+    font-size: 16px;
+  }
+  .main-content .right-sidebar ul {
+    padding-left: 10px;
+  }
+}
+
+/*# sourceMappingURL=style4.css.map */
