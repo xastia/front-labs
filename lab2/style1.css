@@ -29,6 +29,9 @@ body {
   margin: 0 10px;
   text-decoration: none;
 }
+.header .navigation a:hover {
+  color: #eee;
+}
 .header .search input {
   padding: 5px;
   border: none;
@@ -81,6 +84,10 @@ body {
   padding: 10px;
   background: #eee;
   border-radius: 4px;
+}
+.container .trends ul li:hover {
+  background: rgb(95, 95, 95);
+  color: #ddd;
 }
 
 .hero {

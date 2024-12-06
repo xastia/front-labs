@@ -40,6 +40,11 @@ body {
       margin: 0 10px;
       text-decoration: none;
     }
+    
+    a:hover {
+        color: $link-hover-bg;
+
+    }
   }
 
   .search {
@@ -74,7 +79,7 @@ body {
         border-radius: 4px;
       }
 
-      a:hover{
+      a:hover {
         background: $hover-color;
         color: $hero-bg;
       }
@@ -104,6 +109,11 @@ body {
         padding: 10px;
         background: $link-hover-bg;
         border-radius: 4px;
+      }
+
+      li:hover {
+        background: $hover-color;
+        color: $hero-bg;
       }
     }
   }
