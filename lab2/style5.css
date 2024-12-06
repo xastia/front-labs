@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+.header .logo {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.header .slogan {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.main-content {
+  margin: 20px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.products-table {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+}
+.products-table th, .products-table td {
+  border: 1px solid rgb(127.5, 127.5, 127.5);
+  padding: 15px;
+  text-align: center;
+}
+.products-table th {
+  background-color: white;
+  font-size: 18px;
+}
+
+.product {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+.product h2 {
+  font-size: 20px;
+  color: #d98659;
+  margin: 10px 0;
+}
+
+.subscribe {
+  margin: 20px 0;
+}
+.subscribe .email-input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid rgb(127.5, 127.5, 127.5);
+  border-radius: 4px;
+  font-size: 16px;
+}
+.subscribe .subscribe-btn {
+  padding: 10px 20px;
+  background-color: #d98659;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.subscribe .subscribe-btn:hover {
+  background-color: #b76442;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+.footer .footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.footer .footer-list ul {
+  list-style: none;
+}
+.footer .footer-list ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.footer .footer-list ul li:hover {
+  color: #d98659;
+}
+
+@media (max-width: 768px) {
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+  .email-input {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .header .logo {
+    font-size: 24px;
+  }
+  .slogan {
+    font-size: 16px;
+  }
+  .product h2 {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=style5.css.map */
