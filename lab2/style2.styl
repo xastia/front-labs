@@ -1,0 +1,132 @@
+$primary-color = #3a3a3a
+$secondary-color = #fff
+$highlight-color = #d98659
+$background-color = #f9f9f9
+$box-shadow = 0 2px 4px rgba(0, 0, 0, 0.1)
+$sidebar-bg = #eaeaea
+
+body
+  font-family Arial, sans-serif
+  margin 0
+  padding 0
+  background-color $background-color
+
+.header
+  display flex
+  justify-content space-between
+  align-items center
+  background-color $primary-color
+  color $secondary-color
+  padding 10px 20px
+
+  .logo
+    font-size 24px
+    font-weight bold
+
+  .search input
+    padding 7px
+    border-radius 4px
+    border 1px solid #ddd
+    width 70%
+
+  .cart button
+    padding 7px 15px
+    background-color $highlight-color
+    color $secondary-color
+    border none
+    border-radius 4px
+    cursor pointer
+
+    &:hover
+      background-color brown
+
+.container
+  overflow hidden
+  margin 20px
+
+
+.sidebar
+  float left
+  width 20%
+  max-width 200px
+  background-color $sidebar-bg
+  padding 15px
+  box-shadow $box-shadow
+
+  ul
+    list-style none
+    padding 0
+
+  li
+    margin-bottom 10px
+
+  a
+    text-decoration none
+    color $primary-color
+    padding 10px
+    display block
+    border-radius 4px
+    background-color $secondary-color
+
+    &:hover
+      background-color #ddd
+
+
+.main-content
+  float left
+  width 75%
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(250px, 1fr))
+  gap 20px
+
+  .product
+    background-color $secondary-color
+    padding 15px
+    border-radius 4px
+    text-align center
+    box-shadow $box-shadow
+
+    img
+      max-width 200px
+      max-height 200px
+      height auto
+      border-radius 4px
+
+    .item-name
+      font-weight bold
+      margin 10px 0
+
+    .item-price
+      color $highlight-color
+      margin 5px 0
+
+    .buy-button
+      padding 7px 15px
+      background-color $primary-color
+      color $secondary-color
+      border none
+      border-radius 4px
+      cursor pointer
+
+      &:hover
+        background-color $highlight-color
+
+
+@media (max-width: 768px)
+  .sidebar
+    float none
+    width 100%
+    margin-bottom 20px
+
+  .main-content
+    float none
+    width 100%
+
+@media (max-width: 480px)
+  .header
+    flex-wrap wrap
+
+    .logo, .cart
+      text-align center
+      width 100%
+      margin-bottom 10px
