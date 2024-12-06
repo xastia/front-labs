@@ -1,5 +1,6 @@
 $primary-color: #333;
 $secondary-color: white;
+$hover-color: rgb(95, 95, 95);
 $bg-color: #f9f9f9;
 $hero-bg: #ddd;
 $link-hover-bg: #eee;
@@ -72,8 +73,14 @@ body {
         margin-bottom: 5px;
         border-radius: 4px;
       }
+
+      a:hover{
+        background: $hover-color;
+        color: $hero-bg;
+      }
     }
   }
+
 
   .main-content {
     flex: 3;
@@ -101,6 +108,7 @@ body {
     }
   }
 }
+
 
 .hero {
   padding: 20px;

@@ -57,6 +57,10 @@ body {
   margin-bottom: 5px;
   border-radius: 4px;
 }
+.container .sidebar ul a:hover {
+  background: rgb(95, 95, 95);
+  color: #ddd;
+}
 .container .main-content {
   flex: 3;
   margin-right: 20px;
