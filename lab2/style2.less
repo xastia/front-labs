@@ -6,6 +6,7 @@
 @color-accent: #d98659;
 @color-hover: brown;
 @shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+@light-grey: grey;
 
 body {
   font-family: @font-family;
@@ -77,9 +78,11 @@ body {
       border-radius: 4px;
       background-color: @color-light;
 
-      &:hover {
-        background-color: lighten(@bg-light, 5%);
-      }
+    }
+
+    a:hover {
+        background-color: @light-grey;
+        color: @color-light
     }
   }
 }
