@@ -1,0 +1,157 @@
+@font-family: Arial, sans-serif;
+@bg-light: #f9f9f9;
+@bg-dark: #3a3a3a;
+@color-light: #fff;
+@color-dark: #333;
+@color-accent: #d98659;
+@color-hover: brown;
+@shadow-small: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+body {
+  font-family: @font-family;
+  margin: 0;
+  padding: 0;
+  background-color: @bg-light;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @bg-dark;
+  color: @color-light;
+  padding: 10px 20px;
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .search input {
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid lighten(@color-dark, 20%);
+    width: 70%;
+  }
+
+  .cart button {
+    padding: 7px 15px;
+    background-color: @color-accent;
+    color: @color-light;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @color-hover;
+    }
+  }
+}
+
+.container {
+  overflow: hidden;
+  margin: 20px;
+}
+
+.sidebar {
+  float: left;
+  width: 20%;
+  max-width: 200px;
+  background-color: lighten(@bg-light, 10%);
+  padding: 15px;
+  box-shadow: @shadow-small;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    a {
+      text-decoration: none;
+      color: @color-dark;
+      padding: 10px;
+      display: block;
+      border-radius: 4px;
+      background-color: @color-light;
+
+      &:hover {
+        background-color: lighten(@bg-light, 5%);
+      }
+    }
+  }
+}
+
+.main-content {
+  float: left;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+
+  .product {
+    background-color: @color-light;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: @shadow-small;
+
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .item-name {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .item-price {
+      color: @color-accent;
+      margin: 5px 0;
+    }
+
+    .buy-button {
+      padding: 7px 15px;
+      background-color: @bg-dark;
+      color: @color-light;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: @color-accent;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-wrap: wrap;
+
+    .logo,
+    .cart {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
