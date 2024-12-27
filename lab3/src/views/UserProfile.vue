@@ -2,6 +2,9 @@
   <div class="profile-container">
     <h1>{{ fullName ? `${fullName}'s Session` : 'Loading profile...' }}</h1>
 
+    <!-- Кнопка "Вийти" -->
+    <button @click="logout" class="logout-btn">Logout</button>
+
     <p class="username-info">Username: {{ username }}</p>
 
     <div class="actions" v-if="isAuthorizedUser">
@@ -38,19 +41,20 @@
   </div>
 </template>
 
+
 <script>
 import { getUserPosts, createUserPost, getMe, likePost, unlikePost } from "../api";
 
 export default {
   data() {
     return {
-      username: this.$route.params.username, // Отримуємо username з URL
+      username: this.$route.params.username,
       fullName: '',
       posts: [],
       showCreatePost: false,
       newPostContent: '',
       selectedPostId: null,
-      isAuthorizedUser: false, // Стан для контролю видимості кнопки
+      isAuthorizedUser: false,
     };
   },
   methods: {
@@ -59,7 +63,7 @@ export default {
         const response = await getUserPosts(this.username, 1);
         this.posts = response.data.map(post => ({
           ...post,
-          liked: false, // Початкове значення для лайків
+          liked: false, 
         }));
       } catch (error) {
         alert('Failed to fetch posts!');
@@ -86,6 +90,14 @@ export default {
         alert('Failed to create post!');
       }
     },
+    async logout() {
+    try {
+      this.$router.push({ name: 'UserLogin' });
+    } catch (error) {
+      alert('Failed to log out!');
+      console.error('Logout error:', error);
+    }
+  },
     selectPost(postId) {
       this.selectedPostId = this.selectedPostId === postId ? null : postId;
       console.log(this.selectedPostId);
@@ -108,7 +120,7 @@ export default {
         const response = await getMe();
         const currentUser = response.data;
         this.isAuthorizedUser =
-          currentUser.username === this.username; // Перевірка username
+          currentUser.username === this.username; 
         this.fullName = currentUser.full_name;
         this.fetchPosts();
       } catch (error) {
@@ -238,5 +250,21 @@ textarea {
 .like-btn:hover {
   transform: scale(1.2);
 }
+
+.logout-btn {
+  background-color: #f1a7c5;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  background-color: #e295b1;
+}
+
 </style>
 

@@ -27,18 +27,16 @@ export default {
   methods: {
     async handleLogin() {
       try {
-        // Виконуємо вхід
         await login({ username: this.username, password: this.password });
         
-        // Зберігаємо username та password у localStorage для подальшого використання
+    
         localStorage.setItem('username', this.username);
         localStorage.setItem('password', this.password);
         
         const authStore = useAuthStore();
         authStore.setUserCredentials(this.username, this.password);
 
-        // Перехід на сторінку користувача
-        this.$router.push(`/users/${this.username}`);
+        this.$router.push(`/users/${this.username}/posts`);
       } catch (error) {
         alert('Login failed!');
       }
