@@ -8,9 +8,9 @@ const api = axios.create({
 
 const getAuthHeader = () => {
     const authStore = useAuthStore();
-    const username = authStore.username; // Отримуємо username з store
-    const password = authStore.password; // Отримуємо password з store
-    return `Basic ${btoa(`${username}:${password}`)}`; // Створюємо Basic Auth заголовок
+    const username = authStore.username;
+    const password = authStore.password; 
+    return `Basic ${btoa(`${username}:${password}`)}`; 
   };
 
 export const register = (data) => api.post('/register', data);
@@ -26,7 +26,7 @@ export const getMe = () => api.get('/me', {
 export const getUserPosts = async (username, page) => {
     return api.get(`/users/${username}/posts?page=${page}`, {
         headers: {
-            Authorization: getAuthHeader(), // Використовуємо getAuthHeader для авторизації
+            Authorization: getAuthHeader(), 
         },
     });
 };
@@ -61,8 +61,8 @@ export const unlikePost = (username, postId) =>
 export const createUserPost = async (username, postData) => {
     try {
         const authHeader = getAuthHeader();
-        const response = await axios.post(
-            `http://localhost:8000/api/users/${username}/posts`,
+        const response = api.post(
+            `/users/${username}/posts`,
             { content: postData.content }, 
             {
                 headers: {

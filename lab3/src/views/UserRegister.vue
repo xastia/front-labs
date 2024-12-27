@@ -34,12 +34,10 @@ export default {
           password: this.password,
           full_name: this.fullName,
         });
-        //alert('Registration successful!');
-        // Переходимо на сторінку профілю після успішної реєстрації
-
+  
         const authStore = useAuthStore();
         authStore.setUserCredentials(this.username, this.password);
-        this.$router.push(`/users/${this.username}`);
+        this.$router.push(`/users/${this.username}/posts`);
       } catch (error) {
         console.error(error.response?.data || error.message);
         alert('Registration failed: ' + (error.response?.data?.detail || 'Unknown error'));

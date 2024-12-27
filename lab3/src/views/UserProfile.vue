@@ -2,7 +2,6 @@
   <div class="profile-container">
     <h1>{{ fullName ? `${fullName}'s Session` : 'Loading profile...' }}</h1>
 
-    <!-- Кнопка "Вийти" -->
     <button @click="logout" class="logout-btn">Logout</button>
 
     <p class="username-info">Username: {{ username }}</p>
@@ -21,10 +20,6 @@
       >
         <div class="post-content">{{ post.content }}</div>
         <div v-if="post.id === selectedPostId" class="post-actions">
-          <button @click.stop="toggleLike(post)" class="like-btn">
-            <span v-if="post.liked">❤️</span>
-            <span v-else>🤍</span> Like
-          </button>
         </div>
       </li>
     </ul>
