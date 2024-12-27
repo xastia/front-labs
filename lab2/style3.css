@@ -17,7 +17,7 @@ body {
   background: #333;
   color: #fff;
   padding: 15px 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .header .logo {
   font-size: 28px;
@@ -33,7 +33,7 @@ body {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .header .register button:hover {
-  background-color: #a52a2a;
+  background-color: brown;
   transform: scale(1.05);
 }
 .intro {
@@ -43,7 +43,7 @@ body {
   padding: 40px;
   background-color: #fff;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .intro .text-content {
   flex: 1;
@@ -67,7 +67,7 @@ body {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .intro button:hover {
-  background-color: #a52a2a;
+  background-color: brown;
   transform: scale(1.1);
 }
 .intro img {
@@ -87,7 +87,7 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-width: 250px;
@@ -95,18 +95,18 @@ body {
 }
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .card h2 {
   margin-bottom: 10px;
 }
 .card p {
   font-size: 16px;
-  color: #555;
+  color: #1a1a1a;
 }
 .steps {
   padding: 20px;
-  background: #f5f5f5;
+  background: #ffffff;
   margin-bottom: 20px;
 }
 .steps h2 {
@@ -133,7 +133,7 @@ body {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .steps .step span:hover {
-  background-color: #a52a2a;
+  background-color: brown;
   transform: scale(1.1);
 }
 .steps .step h3 {
@@ -153,7 +153,7 @@ body {
 .footer ul li {
   display: inline;
   margin-right: 15px;
-  color: #bbb;
+  color: #808080;
 }
 .footer ul li:hover {
   color: #fff;
